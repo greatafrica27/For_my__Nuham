@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Journey For You ❤️</title>
+    <style>
+        /* Romantic layout & smooth animations */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffe5ec, #ffc2d1);
+            color: #4a4a4a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 480px;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        h1 {
+            color: #ff4d6d;
+            margin-top: 0;
+        }
+
+        .btn {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            margin: 15px auto 0 auto;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #ff758f;
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* --- Timeline Specific Styling --- */
+        .timeline {
+            position: relative;
+            max-width: 100%;
+            margin: 30px auto;
+            padding-left: 30px;
+            text-align: left;
+            border-left: 3px dashed #ff8fa3;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .timeline-item::before {
+            content: '❤️';
+            position: absolute;
+            left: -42px;
+            top: -2px;
+            background: white;
+            border-radius: 50%;
+            padding: 2px;
+            font-size: 14px;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: #ff4d6d;
+            font-size: 14px;
+            margin: 0 0 5px 0;
+        }
+
+        .timeline-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            color: #2b2b2b;
+        }
+
+        .timeline-desc {
+            margin: 0;
+            font-size: 15px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        #final-letter {
+            line-height: 1.6;
+            white-space: pre-wrap;
+            text-align: left;
+        }
+
+        .heart-icon {
+            font-size: 40px;
+            color: #ff4d6d;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SCREEN 1: Welcome Page -->
+    <div id="screen-welcome" class="card">
+        <div class="heart-icon">❤️</div>
+        <h1>ሰላም ተወዳጇ!</h1>
+        <p>I built a little walk down memory lane just for us. Let's look back at our journey before we play a little game!</p>
+        <button class="btn" onclick="showTimeline()">Look at our memories</button>
+    </div>
+
+    <!-- SCREEN 2: The Timeline View -->
+    <div id="screen-timeline" class="card hidden">
+        <h1>Our Story So Far...</h1>
+        <p style="color: #888;">Scroll through our special moments ❤️</p>
+        
+        <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <p class="timeline-date">feb 10, 2024</p>
+                <p class="timeline-title">The Day i sent to you this message "I heard...You were looking for me"🌟</p>
+                <p class="timeline-desc"> በደንብ ሳውቅሽ ለካ እኔ ነበርኩ አንቺን እየፈለኩ የነበረው። እንኳንም ያን ቴክስት ጻፍኩ እንኳንም 2 ሳምንት በኋላ ቢሆንም መለስሽልኝ</p></p>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <p class="timeline-date">may 7 2026</p>
+                <p class="timeline-title">ገዋሳ ሂደን የጠየኩሽ ☕</p>
+                <p class="timeline-desc">አጭር ታሪኬን ነግሬ የጠየኩት ትዝ ይልሻል? የመለስሽልኝ እና ምናወራው አልገናኝ ብሎኝ ግራ ገብቶኝ ነበር። በቃ አልፈለገችም ማለት ነው ብዬ። ከዛ ባጃጅ ውስጥ ተደገፍሽኝ እስካሁን እንደፈዘዝኩ ነኝ</p>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <p class="timeline-date">May 29, 2025</p>
+                <p class="timeline-title">እንዳቅፍሽ የኔ እንድልሽ የተፈቀደልኝ ቀን 🌹</p>
+                <p class="timeline-desc">እንደቀልድ ከ5 ወር በላይ ሆነን እኮ። ውድ የሆንሽውን አንችን ከሰጠሽኝ። ትኩስ ነገር ስጠጣ ልቤ ውስጥ እንዳያቃጥልሽ ማሰብ ከጀመርኩ😁</p>
+            </div>
+        </div>
+
+        <button class="btn" onclick="startQuiz()">Next: Ready for a challenge? 😉</button>
+    </div>
+
+    <!-- SCREEN 3: The Quiz -->
+        <!-- SCREEN 3: The Quiz -->
+    <div id="screen-quiz" class="card hidden">
+        <div class="score-tracker" style="font-size: 16px; font-weight: bold; color: #ff4d6d; margin-bottom: 15px; background: #fff0f3; padding: 8px; border-radius: 10px; display: inline-block;">
+            
+        </div>
+        <h1 id="question-number">Question 1</h1>
+        <p id="question-text">Loading question...</p>
+        
+        <div id="options-container"></div>
+        
+        <p id="error-message" style="color: #ff4d6d; font-weight: bold; min-height: 24px;"></p>
+    </div>
+
+    <!-- SCREEN 4: The Grand Surprise -->
+    <div id="screen-surprise" class="card hidden">
+        <div class="heart-icon">💖</div>
+        <h1>Game Complete!</h1>
+        <h3 id="final-rank" style="color: #ff4d6d; margin-bottom: 20px;"></h3>
+        <p id="final-letter">Dear nuham,
+
+You finished the game! 
+
+I wanted to build this website just to remind you how deeply loved you are. Every single day with you is an absolute dream, and I'm so incredibly lucky to have you in my life.
+
+Thank you for being my teammate, my best friend, and my whole world. 
+
+I love you to the moon and back! ✨</p>
+    </div>
+
+
+    <script>
+        // Quiz config
+        const quizData = [
+            {
+                question: "Where did i touch your boobs for the first time😁?",
+                options: ["Megenagna", "wesen", "ayat"],
+                correctIndex: 0
+            },
+            {
+                question: "What is my absolute favorite thing about you?",
+                options: ["Your style","your body", "Your gorgeous smile", "your eyes", "Trick question: Everything!"],
+                correctIndex: 4
+            },
+            {
+                question:  "How long do I want to keep making memories with you?",
+                options: ["Forever and ever", "A couple of years", "Until next week"],
+                correctIndex: 0
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function showTimeline() {
+            document.getElementById('screen-welcome').classList.add('hidden');
+            document.getElementById('screen-timeline').classList.remove('hidden');
+            window.scrollTo(0,0);
+        }
+
+        function startQuiz() {
+            document.getElementById('screen-timeline').classList.add('hidden');
+            document.getElementById('screen-quiz').classList.remove('hidden');
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            document.getElementById('error-message').innerText = "";
+            const currentData = quizData[currentQuestionIndex];
+            
+            document.getElementById('question-number').innerText = `Question ${currentQuestionIndex + 1} of ${quizData.length}`;
+            document.getElementById('question-text').innerText = currentData.question;
+            
+            const container = document.getElementById('options-container');
+            container.innerHTML = "";
+
+            currentData.options.forEach((optionText, index) => {
+                const button = document.createElement('button');
+                button.className = 'btn';
+                button.innerText = optionText;
+                button.onclick = () => checkAnswer(index);
+                container.appendChild(button);
+            });
+        }
+
+        function checkAnswer(selectedIndex) {
+            const currentData = quizData[currentQuestionIndex];
+            
+            if (selectedIndex === currentData.correctIndex) {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < quizData.length) {
+                    loadQuestion();
+                } else {
+                    showSurprise();
+                }
+            } else {
+                document.getElementById('error-message').innerText = "Oops! Try that one again ተወዳጇ! 😘";
+            }
+        }
+
+        function showSurprise() {
+            document.getElementById('screen-quiz').classList.add('hidden');
+            document.getElementById('screen-surprise').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
